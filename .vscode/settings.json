@@ -1,4 +1,4 @@
 {
     "editor.cursorStyle": "block",
-    "editor.cursorBlinking": "expand"
+    "editor.cursorBlinking": "solid"
 }
