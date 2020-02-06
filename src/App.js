@@ -1,15 +1,22 @@
 import React from 'react';
 
-class App extends React.Component{
-  render(){
-    const dom = <h1>Hello,world</h1>;
-    return (
-      <div className="App">
-        {dom}
-        <input type="text" onClick={() => {console.log("I am a Hero!")}} />
-      </div>
-    );
-  }
+const App = ()  => {
+  const profiles = [
+    {name:"Moeto",age:20},
+    {name:"Suzuki",age:20}
+  ];
+  return(
+    <div>
+      {
+        profiles.map((profile) => {
+          return <User name={profile.name} age={profile.age} />
+        })
+      }
+    </div>
+  )
 }
 
+const User = (props) => {
+return <div>Hi!I am {props.name} and {props.age} years old</div>
+}
 export default App;
